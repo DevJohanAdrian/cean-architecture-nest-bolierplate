@@ -1,3 +1,33 @@
+// {
+//   "compilerOptions": {
+//     "module": "commonjs",            // Usa ESNext para módulos
+//     "target": "ES2020",           // O una versión compatible con tu entorno
+//     //"moduleResolution": "Bundler",    // Para resolver módulos como lo hace Node.js
+//     "outDir": "./dist",            // Directorio de salida para archivos compilados
+//     "rootDir": "./src",            // Directorio raíz de los archivos fuente
+//     "noEmit": true,                // No emite archivos .js
+//     "allowImportingTsExtensions": true, // Permite importar .ts sin extensión
+//     "esModuleInterop": true,        // Habilita interoperabilidad con CommonJS
+//     "experimentalDecorators": true, // Necesario para decorators
+//     "emitDecoratorMetadata": true,  // Necesario para decorators
+//     "strict": true,                 // Otras opciones según tus necesidades
+
+//     "declaration": true,
+//     "removeComments": true,
+//     "allowSyntheticDefaultImports": true,
+//     "sourceMap": true,
+//     "baseUrl": "./",
+//     "incremental": true,
+//     "skipLibCheck": true,
+//     "strictNullChecks": false,
+//     "noImplicitAny": false,
+//     "strictBindCallApply": false,
+//     "forceConsistentCasingInFileNames": false,
+//     "noFallthroughCasesInSwitch": false
+//   },
+//   "include": ["src/**/*.ts"],      // Incluir todos los archivos .ts en src
+//   "exclude": ["node_modules", "dist"] // Excluir estos directorios
+// }
 {
   "compilerOptions": {
     "module": "commonjs",

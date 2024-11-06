@@ -1,0 +1,20 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "admin",
+  "password": "my-weak-password",
+  "database": "nest_boilerplate",
+  "autoLoadEntities": true,
+  "synchronize": true,
+  "migrations": [
+    "dist/database/migrations/*.js"
+  ],
+  "entities": [
+    "dist/**/*.entity.js"
+  ],
+  "cli": {
+    "migrationsDir": "src/database/migrations"
+  },
+  "logging": "all"
+}

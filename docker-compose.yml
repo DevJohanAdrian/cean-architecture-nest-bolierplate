@@ -15,7 +15,7 @@ services:
     environment:
       POSTGRES_DB: nest_boilerplate
       POSTGRES_USER: admin
-      POSTGRES_PASSWORD: my-weak-passwork
+      POSTGRES_PASSWORD: my-weak-password
     ports:
       - 5432:5432
   pgadmin4:

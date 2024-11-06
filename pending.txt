@@ -1,0 +1,22 @@
+Pasar a esmodule
+Configurar el debugger x leer mas para ver posibles configuraciones
+migrations de typeorm
+Agregar compression x
+Agregar cors x
+Agregar ratelimit (OPTIONAL) Pasar a un modulo como typeorm
+Agregar jwt
+Agregar helmet x
+Agregar swagger
+Agregar logger
+Agregar husky
+Agregar vitest y configurarlo
+Como realizar pruebas end2end
+Pruebas unitarias y de integracion
+Agregar ci/cd
+Agregar middleware de errores (hof)
+Agregar versionamiento
+Public path para que es ?
+Agregar pipes
+
+
+
