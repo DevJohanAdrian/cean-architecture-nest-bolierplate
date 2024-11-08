@@ -3,7 +3,6 @@ import {
   Get,
   Post,
   Body,
-  Patch,
   Param,
   Delete,
   Req,
@@ -32,9 +31,10 @@ export class UsersController {
   //   return res.status(201).json(result);
   // }
 
-  @Get('/getall')
+  @Get('getall')
   findAll(@Req() req: Request, @Res() res: Response) {
-    return this.usersService.findAll();
+    res.json('hola mundo');
+    // return this.usersService.findAll();
   }
 
   @Get(':id')

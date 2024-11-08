@@ -1,12 +1,14 @@
-Pasar a esmodule
-Configurar el debugger x leer mas para ver posibles configuraciones
-migrations de typeorm
+
+
 Agregar compression x
 Agregar cors x
-Agregar ratelimit (OPTIONAL) Pasar a un modulo como typeorm
-Agregar jwt
 Agregar helmet x
-Agregar swagger
+Agregar swagger x
+Agregar ratelimit (OPTIONAL) Pasar a un modulo como typeorm
+
+Configurar el debugger x leer mas para ver posibles configuraciones
+migrations de typeorm
+Agregar jwt
 Agregar logger
 Agregar husky
 Agregar vitest y configurarlo
@@ -14,9 +16,13 @@ Como realizar pruebas end2end
 Pruebas unitarias y de integracion
 Agregar ci/cd
 Agregar middleware de errores (hof)
-Agregar versionamiento
+Agregar versionamiento x
 Public path para que es ?
-Agregar pipes
+Agregar pipes para validaciones
+Implementar HATEOAS ver si hacer en una rama diferente
+Pasar a esmodule
+Agregar mudulo sano para el bolierplate
+
 
 
 
