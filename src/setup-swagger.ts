@@ -53,7 +53,10 @@ Routes is following REST standard (Richardson level 3)
     .build();
 
   const documentFactory = () => SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('docs', app, documentFactory);
+  //Tercer para metro para descargar la documentacion de swagger en json
+  SwaggerModule.setup('docs', app, documentFactory, {
+    jsonDocumentUrl: 'docs/json',
+  });
 
   console.info(`Documentation: http://localhost:${process.env.PORT}/docs`);
 }

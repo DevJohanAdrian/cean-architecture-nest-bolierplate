@@ -20,19 +20,6 @@ async function bootstrap() {
     defaultVersion: '1', // Define la versión predeterminada globalmente
   });
 
-  //CORS
-  app.enableCors({
-    origin: configService.get<string>('CORS_ORIGIN'),
-  });
-
-  app.use(helmet());
-  app.use(compression());
-  // Aplica el guard de rate limit globalmente
-  // app.useGlobalGuards(new ThrottlerGuard(app.get(Reflector)));
-
-  // if (configService.documentationEnabled) {
-  setupSwagger(app);
-  // }
   await app.listen(AppModule.port, () => {
     console.log(
       `Server (${configService.get<string>('NODE_ENV')}) running on port http://${configService.get<string>('HOST')}:${AppModule.port}`,
