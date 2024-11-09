@@ -4,16 +4,17 @@ import { ThrottlerGuard } from '@nestjs/throttler';
 import * as compression from 'compression';
 import helmet from 'helmet';
 import { setupSwagger } from './setup-swagger';
+import { Environment } from './common/enum';
 
 export function middlewaresConfiguration(
   app: INestApplication,
 ): INestApplication {
   const configureService = app.get(ConfigService);
-  const isProduction = configureService.get<string>('NODE_ENV');
+  const environment = configureService.get<string>('NODE_ENV');
 
   //CORS
   app.enableCors({
-    origin: configService.get<string>('CORS_ORIGIN'),
+    origin: configureService.get<string>('CORS_ORIGIN'),
   });
 
   app.use(helmet());
@@ -21,9 +22,10 @@ export function middlewaresConfiguration(
   // Aplica el guard de rate limit globalmente
   // app.useGlobalGuards(new ThrottlerGuard(app.get(Reflector)));
 
-  //   if () {
-  //     setupSwagger(app);
-  //   }
+  // Swagger docs only in deveploment envs
+  if (environment !== Environment.Production) {
+    setupSwagger(app);
+  }
 
   return app;
 }

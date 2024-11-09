@@ -1,30 +1,38 @@
 
-
+Agregar versionamiento x
 Agregar compression x
 Agregar cors x
 Agregar helmet x
 Agregar swagger x
-Pasar middlewares a un modulo aparte para dejar el main limpio
-Agregar ratelimit (OPTIONAL) Pasar a un modulo como typeorm
-
-Leer mar sobre el apartado de swagger de nestjs
+Pasar middlewares a un modulo aparte para dejar el main limpio x
+Agregar logger x (Leer la domentacion que no me quedo muy claro)
+migrations de typeorm x
+Agregar pipes para validaciones x
 Crear lista de decoradores custom (awesome-nest-boilerplate)
-Configurar el debugger x leer mas para ver posibles configuraciones
-migrations de typeorm
+Handle errores
+
+
+@nestjs/cache-manager (Cacheo)
 Agregar jwt
-Agregar logger
 Agregar husky
-Agregar vitest y configurarlo
-Como realizar pruebas end2end
-Pruebas unitarias y de integracion
 Agregar ci/cd
 Agregar middleware de errores (hof)
-Agregar versionamiento x
 Public path para que es ?
-Agregar pipes para validaciones
+
 Implementar HATEOAS ver si hacer en una rama diferente
 Pasar a esmodule
 Agregar mudulo sano para el bolierplate
+keep alive
+Agregar vitest y configurarlo
+Como realizar pruebas end2end
+Pruebas unitarias y de integracion
+
+ULTIMOS PASOS
+Crear archivo para guardar todas las configuraciones del back end (apiconfig.service.ts)
+Leer mar sobre el apartado de swagger de nestjs
+Configurar el debugger x leer mas para ver posibles configuraciones
+Agregar ratelimit x (Ahondar en la configuraciones que son algo complejas)
+prettier y eslint
 
 
 
