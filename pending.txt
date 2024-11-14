@@ -7,7 +7,10 @@ Agregar swagger x
 Pasar middlewares a un modulo aparte para dejar el main limpio x
 Agregar logger x (Leer la domentacion que no me quedo muy claro)
 migrations de typeorm x
-Agregar pipes para validaciones x
+Agregar pipes para validaciones Validation pipe (deserializacion) x
+generar seralizacion con class-tramsfor (Serializacion) x
+Agregar vitest y configurarlo 
+keep alive
 Crear lista de decoradores custom (awesome-nest-boilerplate)
 Handle errores
 
@@ -22,12 +25,13 @@ Public path para que es ?
 Implementar HATEOAS ver si hacer en una rama diferente
 Pasar a esmodule
 Agregar mudulo sano para el bolierplate
-keep alive
-Agregar vitest y configurarlo
+
+
 Como realizar pruebas end2end
 Pruebas unitarias y de integracion
 
 ULTIMOS PASOS
+Pasar a SWC y dejarlo en una rama diferente
 Crear archivo para guardar todas las configuraciones del back end (apiconfig.service.ts)
 Leer mar sobre el apartado de swagger de nestjs
 Configurar el debugger x leer mas para ver posibles configuraciones

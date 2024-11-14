@@ -11,6 +11,7 @@ import {
 import { Request, Response } from 'express';
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
+import { IUser } from './interfaces/user.interfce';
 
 @Controller('users')
 export class UsersController {
@@ -32,7 +33,7 @@ export class UsersController {
   // }
 
   @Get('getall')
-  findAll(@Req() req: Request, @Res() res: Response) {
+  findAll(@Req() req: Request, @Res() res: Response): Promise<IUser> {
     res.json('hola mundo');
     // return this.usersService.findAll();
   }

@@ -32,6 +32,7 @@ import { AppService } from './app.service';
   ],
   controllers: [AppController],
   providers: [AppService],
+  exports: [],
 })
 export class AppModule {
   static port;

@@ -1,6 +1,10 @@
-import { NestFactory } from '@nestjs/core';
+import { NestFactory, Reflector } from '@nestjs/core';
 import { ConfigService } from '@nestjs/config';
-import { VersioningType } from '@nestjs/common';
+import {
+  ClassSerializerInterceptor,
+  ValidationPipe,
+  VersioningType,
+} from '@nestjs/common';
 
 import { AppModule } from './app.module';
 import { middlewaresConfiguration } from './main.middleware';
@@ -26,6 +30,21 @@ async function bootstrap() {
   // Logger
   const logger = new AppLoggerService(configService);
   app.useLogger(logger);
+
+  // Serializacion interceptors
+  app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
+
+  // Pipes para desserializacion (Json -> class DTO)
+  app.useGlobalPipes(
+    new ValidationPipe({
+      transform: true, // Para dar el tipo de dato esperado por endpoint (Id:number y createDto:Dto)
+      whitelist: true, // Borra campos que no se esperan en la request
+      forbidNonWhitelisted: true, // Lanza un error si se encuentra una propiedad no definida
+      transformOptions: {
+        enableImplicitConversion: true,
+      },
+    }),
+  );
 
   await app.listen(AppModule.port, () => {
     // console.log(
