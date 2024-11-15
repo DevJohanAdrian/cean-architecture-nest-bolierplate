@@ -33,9 +33,10 @@ export class UsersController {
   // }
 
   @Get('getall')
-  findAll(@Req() req: Request, @Res() res: Response): Promise<IUser> {
+  findAll(@Req() req: Request, @Res() res: Response) {
     res.json('hola mundo');
     // return this.usersService.findAll();
+    // :Promise<IUser>
   }
 
   @Get(':id')

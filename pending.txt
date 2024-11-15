@@ -9,8 +9,8 @@ Agregar logger x (Leer la domentacion que no me quedo muy claro)
 migrations de typeorm x
 Agregar pipes para validaciones Validation pipe (deserializacion) x
 generar seralizacion con class-tramsfor (Serializacion) x
-Agregar vitest y configurarlo 
-keep alive
+Agregar vitest y configurarlo x
+keep alive 
 Crear lista de decoradores custom (awesome-nest-boilerplate)
 Handle errores
 
@@ -26,7 +26,7 @@ Implementar HATEOAS ver si hacer en una rama diferente
 Pasar a esmodule
 Agregar mudulo sano para el bolierplate
 
-
+nvmrc y npmrc SWCRC
 Como realizar pruebas end2end
 Pruebas unitarias y de integracion
 
@@ -37,6 +37,8 @@ Leer mar sobre el apartado de swagger de nestjs
 Configurar el debugger x leer mas para ver posibles configuraciones
 Agregar ratelimit x (Ahondar en la configuraciones que son algo complejas)
 prettier y eslint
+Ver como integrar vite y ver exactamente que hace porque tengo dudas de el y tsconfig
+Averiguar bien sobre v8 c8 istabul k6 test:performance
 
 
 
