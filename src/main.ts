@@ -34,7 +34,7 @@ async function bootstrap() {
   // Serializacion interceptors
   app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
 
-  // Pipes para desserializacion (Json -> class DTO)
+  // Pipes para deserializacion (Json -> class DTO)
   app.useGlobalPipes(
     new ValidationPipe({
       transform: true, // Para dar el tipo de dato esperado por endpoint (Id:number y createDto:Dto)
