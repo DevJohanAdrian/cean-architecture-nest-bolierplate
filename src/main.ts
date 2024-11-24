@@ -1,10 +1,6 @@
 import { NestFactory, Reflector } from '@nestjs/core';
 import { ConfigService } from '@nestjs/config';
-import {
-  ClassSerializerInterceptor,
-  ValidationPipe,
-  VersioningType,
-} from '@nestjs/common';
+import { ClassSerializerInterceptor, ValidationPipe, VersioningType } from '@nestjs/common';
 
 import { AppModule } from './app.module';
 import { middlewaresConfiguration } from './main.middleware';
@@ -21,7 +17,7 @@ async function bootstrap() {
   // Habilita el versionamiento
   app.enableVersioning({
     type: VersioningType.URI,
-    defaultVersion: '1', // Define la versión predeterminada globalmente
+    defaultVersion: '1' // Define la versión predeterminada globalmente
   });
 
   // Middlewares
@@ -41,9 +37,9 @@ async function bootstrap() {
       whitelist: true, // Borra campos que no se esperan en la request
       forbidNonWhitelisted: true, // Lanza un error si se encuentra una propiedad no definida
       transformOptions: {
-        enableImplicitConversion: true,
-      },
-    }),
+        enableImplicitConversion: true
+      }
+    })
   );
 
   await app.listen(AppModule.port, () => {
@@ -51,7 +47,7 @@ async function bootstrap() {
     //   Server (${configService.get<string>('NODE_ENV')}) running on port http://${configService.get<string>('HOST')}:${AppModule.port},
     // );
     logger.log(
-      `Server (${configService.get<string>('NODE_ENV')}) running on port http://${configService.get<string>('HOST')}:${configService.get<string>('PORT')}`,
+      `Server (${configService.get<string>('NODE_ENV')}) running on port http://${configService.get<string>('HOST')}:${configService.get<string>('PORT')}`
     );
   });
 }
@@ -61,19 +57,14 @@ const configService = new ConfigService();
 const logger = new AppLoggerService(configService);
 
 // Arrancar la aplicación con manejo de errores
-bootstrap().catch((error) => handleError(error, logger));
+bootstrap().catch(error => handleError(error, logger));
 
 // Función de manejo de errores
 function handleError(error: Error, logger: AppLoggerService) {
-  logger.error(
-    `Unhandled error during bootstrap: ${error instanceof Error ? error.message : error}`,
-    error.stack,
-  );
+  logger.error(`Unhandled error during bootstrap: ${error instanceof Error ? error.message : error}`, error.stack);
   process.exit(1);
 }
 
 // Capturar errores no controlados en tiempo de ejecución
-process.on('uncaughtException', (error) => handleError(error, logger));
-process.on('unhandledRejection', (error) =>
-  handleError(error as Error, logger),
-);
+process.on('uncaughtException', error => handleError(error, logger));
+process.on('unhandledRejection', error => handleError(error as Error, logger));

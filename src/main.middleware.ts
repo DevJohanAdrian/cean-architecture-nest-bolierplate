@@ -6,15 +6,13 @@ import helmet from 'helmet';
 import { setupSwagger } from './setup-swagger';
 import { Environment } from './common/enum';
 
-export function middlewaresConfiguration(
-  app: INestApplication,
-): INestApplication {
+export function middlewaresConfiguration(app: INestApplication): INestApplication {
   const configureService = app.get(ConfigService);
   const environment = configureService.get<string>('NODE_ENV');
 
   //CORS
   app.enableCors({
-    origin: configureService.get<string>('CORS_ORIGIN'),
+    origin: configureService.get<string>('CORS_ORIGIN')
   });
 
   app.use(helmet());

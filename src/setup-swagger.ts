@@ -46,7 +46,7 @@ Routes is following REST standard (Richardson level 3)
       - Logged user is not **<user_id>**
       - The **<user_id>** have no access to **<resource_id>**
 </p>
-</details>`,
+</details>`
     )
     .setVersion('1.0')
     .addBearerAuth()
@@ -55,7 +55,7 @@ Routes is following REST standard (Richardson level 3)
   const documentFactory = () => SwaggerModule.createDocument(app, config);
   //Tercer para metro para descargar la documentacion de swagger en json
   SwaggerModule.setup('docs', app, documentFactory, {
-    jsonDocumentUrl: 'docs/json',
+    jsonDocumentUrl: 'docs/json'
   });
 
   console.info(`Documentation: http://localhost:${process.env.PORT}/docs`);

@@ -14,7 +14,7 @@ import { AppService } from './app.service';
     ConfigModule.forRoot({
       // load: [config],
       isGlobal: true,
-      cache: true, //Cache environment variables
+      cache: true //Cache environment variables
     }),
     //DB TypeORM
     DatabaseModule,
@@ -25,14 +25,14 @@ import { AppService } from './app.service';
       useFactory: (config: ConfigService) => [
         {
           ttl: config.get('THROTTLE_TTL'),
-          limit: config.get('THROTTLE_LIMIT'),
-        },
-      ],
-    }),
+          limit: config.get('THROTTLE_LIMIT')
+        }
+      ]
+    })
   ],
   controllers: [AppController],
   providers: [AppService],
-  exports: [],
+  exports: []
 })
 export class AppModule {
   static port;

@@ -7,8 +7,7 @@ export class AppLoggerService implements LoggerService {
   private logger: winston.Logger;
 
   constructor(private configureService: ConfigService) {
-    const environment =
-      configureService.get<string>('NODE_ENV') || Environment.Development;
+    const environment = configureService.get<string>('NODE_ENV') || Environment.Development;
 
     // configuracion por entorno
     const transports = [];
@@ -21,9 +20,9 @@ export class AppLoggerService implements LoggerService {
       transports.push(
         new winston.transports.File({
           filename: 'logs/error.log',
-          level: 'error',
+          level: 'error'
         }),
-        new winston.transports.File({ filename: 'logs/combined.log' }),
+        new winston.transports.File({ filename: 'logs/combined.log' })
       );
     }
 
@@ -37,9 +36,9 @@ export class AppLoggerService implements LoggerService {
 
         winston.format.printf(({ level, message, label, timestamp }) => {
           return `[${timestamp}] ${label} ${level.toUpperCase()}: ${message}`;
-        }),
+        })
       ),
-      transports,
+      transports
     });
   }
   log(message: string) {

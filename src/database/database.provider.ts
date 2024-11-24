@@ -29,9 +29,9 @@ export const DatabaseProvider: DynamicModule = TypeOrmModule.forRootAsync({
       migrations: ['dist/database/migrations/*.js'],
       entities: ['dist/**/*.entity.js'],
       cli: {
-        migrationsDir: 'src/database/migrations',
+        migrationsDir: 'src/database/migrations'
       },
-      logging: 'all',
+      logging: 'all'
     } as DataSourceOptions;
 
     if (isDevelopmentEnv) {
@@ -39,5 +39,5 @@ export const DatabaseProvider: DynamicModule = TypeOrmModule.forRootAsync({
     }
 
     return dbConfig;
-  },
+  }
 });

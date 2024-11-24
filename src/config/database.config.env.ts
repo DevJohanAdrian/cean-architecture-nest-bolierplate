@@ -13,8 +13,8 @@ export const dbConfig = {
         password: configService.get<string>('DB_PASSWORD'),
         database: configService.get<string>('DB_NAME'),
         autoLoadEntities: true, // Habilita la carga automática de entidades
-        synchronize: configService.get<boolean>('DB_SYNCHRONIZE', false),
-      }),
+        synchronize: configService.get<boolean>('DB_SYNCHRONIZE', false)
+      })
     };
-  },
+  }
 };
